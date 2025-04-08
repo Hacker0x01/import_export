@@ -21,7 +21,7 @@ module ImportExport
       fuzzy_name: false,
       type: nil,
       types: nil,
-      size: 100,
+      size: 50,
       offset: 0
     }.freeze
 

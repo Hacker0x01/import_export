@@ -20,6 +20,11 @@ module ImportExport
       parse_response Query.new(params, api_key).call
     end
 
+    def overall_total(params = {})
+      response = Query.new(params, api_key).call
+      JSON.parse(response)['total']
+    end
+
     private
 
     def parse_response(response)
