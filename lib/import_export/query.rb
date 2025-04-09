@@ -51,6 +51,10 @@ module ImportExport
       if invalid = !UUID.validate(api_key)
         raise ArgumentError, "Invalid API key: #{invalid}"
       end
+
+      if invalid = @params[:size].to_i > 50
+        raise ArgumentError, "API only accepts maximum size param of 50"
+      end
     end
 
     def call
@@ -67,6 +71,7 @@ module ImportExport
 
     def params
       params = @params.clone
+
       params[:countries] = params[:countries].join(',')
       params[:sources]   = params[:sources].join(',')
       params.reject { |_k, v| v.nil? }
