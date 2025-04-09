@@ -71,7 +71,6 @@ module ImportExport
 
     def params
       params = @params.clone
-
       params[:countries] = params[:countries].join(',')
       params[:sources]   = params[:sources].join(',')
       params.reject { |_k, v| v.nil? }
