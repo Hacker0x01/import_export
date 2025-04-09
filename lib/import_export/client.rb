@@ -23,7 +23,14 @@ module ImportExport
     private
 
     def parse_response(response)
-      JSON.parse(response)['results'].map { |data| Result.new(data) }
+      payload = JSON.parse(response)
+      ResultsArray.new(payload['results'].map { |data| Result.new(data) }).tap do |results|
+        results.total_results = payload['total']
+      end
     end
+  end
+
+  class ResultsArray < Array
+    attr_accessor :total_results
   end
 end

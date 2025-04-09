@@ -35,7 +35,7 @@ NOTE: `api_key` defaults to `ENV["TRADE_API_KEY"]` if not specified.
 * `name`
 * `fuzzy_name` (true or false)
 * `type`
-* `size` (number of results per page, defaults to 100)
+* `size` (number of results per page, defaults to 50)
 * `offset` (defaults to 0)
 
 For more information, see [the Consolidated Screening List API docs](https://developer.trade.gov/api-details#api=consolidated-screening-list).

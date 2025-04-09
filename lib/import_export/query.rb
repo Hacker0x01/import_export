@@ -21,7 +21,7 @@ module ImportExport
       fuzzy_name: false,
       type: nil,
       types: nil,
-      size: 100,
+      size: 50,
       offset: 0
     }.freeze
 
@@ -50,6 +50,10 @@ module ImportExport
 
       if invalid = !UUID.validate(api_key)
         raise ArgumentError, "Invalid API key: #{invalid}"
+      end
+
+      if invalid = @params[:size].to_i > 50
+        raise ArgumentError, "API only accepts maximum size param of 50"
       end
     end
 
