@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'dotenv', '~> 2.7'
+  spec.add_dependency 'dotenv', '>= 2.7', '< 4.0'
   spec.add_dependency 'iso_country_codes', '~> 0.7'
   spec.add_dependency 'rest-client', '~> 2.1'
   spec.add_dependency 'uuid', '~> 2.3'
