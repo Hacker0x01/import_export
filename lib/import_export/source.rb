@@ -14,7 +14,7 @@ module ImportExport
       'SDN' => 'Specially Designated Nationals',
       'SSI' => 'Sectoral Sanctions Identifications List',
       'UVL' => 'Unverified List',
-      '561' => 'Part 561 List'
+      '561' => 'Part 561 List',
     }.freeze
 
     class << self
